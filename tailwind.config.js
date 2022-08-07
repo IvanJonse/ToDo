@@ -13,6 +13,8 @@ module.exports = {
 
       'lg': {'max': '992px'},
       // => @media (max-width: 1023px) { ... }
+      'lgmin': {'min': '992px'},
+      // => @media (max-width: 1023px) { ... }
 
       'md': {'max': '767px'},
       // => @media (max-width: 767px) { ... }
@@ -20,8 +22,16 @@ module.exports = {
       'sm': {'max': '639px'},
       // => @media (max-width: 639px) { ... }
     }},
+    
     minWidth: {
       '4rem': '4rem',
+      '3.5rem': '3.5rem',
+      '2rem': '2rem'
+    },
+
+    maxWidth: {
+      '4rem': '4rem',
+      '3.5rem': '3.5rem',
       '2rem': '2rem'
     },
 

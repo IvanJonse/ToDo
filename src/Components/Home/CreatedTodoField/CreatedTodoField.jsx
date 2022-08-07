@@ -2,13 +2,17 @@ import React, {useState} from "react";
 import {VscAdd} from 'react-icons/vsc'
 import {AiTwotoneEdit} from 'react-icons/ai'
 
-const CreatedTodoField = ({setTodos}) => {
+const CreatedTodoField = ({setTodos, setCount, count, planed, setPlaned}) => {
+
+
 
     const [title, setTitle] = useState('')
 
     const addTodo = (title) => {
         setTodos(prev => [...prev, {_id: new Date(), title: title, isCompleted: false}])
         setTitle('')
+        setCount(setTodos.length === 0 ? 0  : count)
+        setPlaned(setTodos.length === 0 ? 0 : planed + 1)
     }
 
 
@@ -36,6 +40,7 @@ const CreatedTodoField = ({setTodos}) => {
         </div>
         
     )
+    
 }
 
 export default CreatedTodoField
