@@ -4,8 +4,6 @@ import {AiTwotoneEdit} from 'react-icons/ai'
 
 const CreatedTodoField = ({setTodos, setCount, count, planed, setPlaned}) => {
 
-
-
     const [title, setTitle] = useState('')
 
     const addTodo = (title) => {
