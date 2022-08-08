@@ -62,15 +62,14 @@ export default function Home() {
     return (
         <div className="text-white container-snap w-full h-full mx-auto overflow-y-auto relative">
                 <div ref={btn}></div>
-            <h1 className="text-2xl font-bold text-center mb-16 sticky top-0 bg-gray-900 pb-5 mt-24 pt-6 xl:mt-16 xl:pt-5">
-                ToDo for someone =)
+            <h1 className="text-2xl flex items-center justify-center mt-24 h-24 z-40 font-bold text-center sticky top-0 bg-gray-900">
+                <Counter counter={planed} image={target}/>
+                &ensp; ToDo for someone =) &ensp;
                 { todos.map(todo => RemoveAllTodo(todo._id)  )}
-                
+
+                    <Counter counter={count} image={check2}/>
             </h1>
-                <div className="text-3xl fixed xl:sticky top-0/5 left-0 text-center block pl-8 px-5 xl:px-0 xl:right-0 xl:mx-auto xl:flex xl:justify-between xl:w-full xl:top-5">
-                   <Counter counter={count} image={check2}/>
-                   <Counter counter={planed} image={target}/>
-                </div>
+                <br /><br />
             <div ref={divRef} className="w-4/5 h-fill flex justify-items-center items-center mx-auto flex-col">
                 { todos.length === 0 ? 
                     <div className="text-4xl lg:text-3xl px-1 absolute top-1/2 flex items-center justify-items-center
@@ -79,7 +78,7 @@ export default function Home() {
                     </div> 
                 : 
             
-                <div className="w-full h-full pb-40 flex justify-items-center items-center mx-auto flex-col">
+                <div className="w-full z-20 h-full mt-5 pb-40 flex justify-items-center items-center mx-auto flex-col">
                     {
 
                     todos.map(todo => <TodoItem key={todo._id} setPlaned={setPlaned} planed={planed} setCount={setCount} count={count} todo={todo} changeTodo={changeTodo} removeTodo={removeTodo}/>

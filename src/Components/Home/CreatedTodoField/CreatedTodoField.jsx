@@ -17,7 +17,7 @@ const CreatedTodoField = ({setTodos, setCount, count, planed, setPlaned}) => {
 
 
     return (
-        <div className="w-4/5 lg:w-full h-40 lg:h-20 flex items-center justify-items-center mx-auto z-10 bg-gray-900 text-2xl fixed bottom-0 left-0 right-0">
+        <div className="w-4/5 lg:w-full h-40 lg:h-20 flex items-center justify-items-center mx-auto z-50 bg-gray-900 text-2xl fixed bottom-0 left-0 right-0">
     
         <input placeholder={'Add new task!'} 
             className="flex items-center z-20 w-full bg-transparent h-16 text-white mr-2 pl-6 border-none outline-none relative" 
