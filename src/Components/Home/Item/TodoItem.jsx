@@ -19,7 +19,7 @@ export default function TodoItem({todo, changeTodo, removeTodo, setCount, count,
         <div className='z-5 border-none w-full flex items-center justify-start mb-10 rounded-2xl bg-gray-800 p-6'>
             <button onClick={handleClickChange} className={`${todo.isCompleted ? 'line-through' : ''}`}>
                 <div className="flex">
-                    <Check isCompleted={todo.isCompleted}/> <span className="flex items-center mr-4 text-left"> {todo.title} </span>
+                    <Check isCompleted={todo.isCompleted}/> <span className="flex items-center mr-4 text-left break-all"> {todo.title} </span>
                 </div>
             </button> 
             <button onClick={ handleClickRemove } className='ml-auto'>
