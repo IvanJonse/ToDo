@@ -58,18 +58,18 @@ export default function Home() {
 
         <div className="text-white container-snap w-full h-full mx-auto overflow-y-auto relative">
 
-            <h1 className="text-2xl flex items-center justify-center mt-24 h-24 z-40 font-bold text-center sticky top-0 bg-gray-900">
+            <div className="text-2xl flex items-center justify-center mt-24 h-auto z-40 font-bold text-center sticky top-0 px-4 bg-gray-900">
 
                 <Counter counter={planed} image={target}/>
 
-                &ensp; ToDo for someone =) &ensp;
+               <h1 className="text-2xl px-4"> ToDo for someone =)</h1>
 
                 <Counter counter={count} image={check2}/>
               
                 { count > 1 ? <button className='ml-6' onClick={removeAllTodo}>Remove all</button> : ''}          
 
            
-            </h1>
+            </div>
 
             <br/><br/>
 
